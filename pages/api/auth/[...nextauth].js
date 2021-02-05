@@ -3,11 +3,6 @@ import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
 const options = {
-  site: process.env.NEXTAUTH_URL,
-  session: {
-    jwt: true,
-    maxAge: 30 * 24 * 60 * 60 // 30 days
-  },
   providers: [
     Providers.Google({
       clientId: process.env.GOOGLE_ID,
